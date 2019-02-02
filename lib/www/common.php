@@ -239,7 +239,7 @@ function putSubmissions(array $cdatas, array $restrictions, $limit = 0, $highlig
         if (IS_JURY && count($cids) > 1) {
             echo "<td><a$link>c${row['cid']}</a></td>";
         }
-        echo "<td><a$link>" . printtime($row['submittime'], null, $row['cid']) . "</a></td>";
+        echo "<td><a$link>" . printtime($row['submittime'], '%T %F', $row['cid']) . "</a></td>";
         if (IS_JURY) {
             echo '<td title="t' .
                 specialchars($row['teamid']) . '">' .
